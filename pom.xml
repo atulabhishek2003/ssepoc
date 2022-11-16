@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>abc</groupId>
+  <artifactId>abc</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>abc</name>
+  <url>http://maven.apache.org</url>
+<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>11</java.version>
+		<selenium.version>3.141.59</selenium.version>
+		<cucumber.version>6.10.2</cucumber.version>
+		<log4j.version>2.17.1</log4j.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>local-maven-repo</id>
+			<name>local-maven-repo</name>
+			<url>file:${project.basedir}/local-maven-repo</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+
+		<!-- JUnit core -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+		</dependency>
+
+		<!-- Selenium -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-support</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+		<!-- Cucumber and Cucumber JUnit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
+		<!-- Extent reporting - Cucumber 6 Adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber6-adapter</artifactId>
+			<version>1.2.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>io.cucumber</groupId>
+					<artifactId>cucumber-java</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>io.cucumber</groupId>
+					<artifactId>cucumber-junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jdom/jdom2 -->
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom2</artifactId>
+			<version>2.0.6</version>
+		</dependency>
+
+
+		<!-- SFDC Metadata API jars -->
+
+		<!-- https://mvnrepository.com/artifact/com.force.api/force-wsc -->
+		<dependency>
+			<groupId>com.force.api</groupId>
+			<artifactId>force-wsc</artifactId>
+			<version>52.0.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.antlr/ST4 -->
+		<dependency>
+			<groupId>org.antlr</groupId>
+			<artifactId>ST4</artifactId>
+			<version>4.0.7</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+		<!-- SFDC Metadata API jars (END) -->
+
+		<!-- LOCAL repository jars -->
+		<dependency>
+			<groupId>com.rbi</groupId>
+			<artifactId>metadata</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.rbi</groupId>
+			<artifactId>enterprise</artifactId>
+			<version>1.0_20210607</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.2.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.4.3</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<!-- With JDK9+ release tag is used instead of source and target tags. 
+						In case Java version is needed to be reverted to 8, please comment release 
+						tag out and use source and target tags. -->
+					<!-- <source>11</source> -->
+					<!-- <target>11</target> -->
+					<release>11</release>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+					<includes>
+						<include>**/RunCucumberTests*.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.5.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>L2IAUTOTEST Cucumber Reports</projectName>
+							<!-- optional, per documentation set this to "true" to bypass generation 
+								of Cucumber Reports entirely, defaults to false if not specified -->
+							<skip>false</skip>
+							<!-- output directory for the generated report -->
+							<outputDirectory>reports/html-reports</outputDirectory>
+							<!-- optional, defaults to outputDirectory if not specified -->
+							<inputDirectory>${project.build.directory}</inputDirectory>
+							<jsonFiles>
+								<!-- supports wildcard or name pattern -->
+								<param>**/*.json</param>
+							</jsonFiles>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		<!-- Post-Man plugin -->
+			 <plugin>
+				<groupId>ch.fortysix</groupId>
+				<artifactId>maven-postman-plugin</artifactId>
+				<version>0.1.6</version>
+				<executions>
+					<execution>
+					
+					<id>send results</id>
+					<phase>test</phase>
+					<goals>
+					<goal>send-mail</goal>
+					</goals>
+					<inherited>true</inherited>
+					
+					<configuration>
+						<!-- From Email address -->
+						<from>autotest@lnrs.com</from>
+						
+						<!--  Email subject -->
+						<subject>Test Automation Report</subject>
+						
+						<!-- Fail the build if the mail doesnt reach -->
+						<failonerror>false</failonerror>
+						
+						<!-- host -->
+						<mailhost>rbnsmtp.b2b.regn.net</mailhost>
+						<!-- port of the host -->
+						<mailport>25</mailport>
+						<mailssl>false</mailssl>
+						<mailAltConfig>true</mailAltConfig>
+						
+						<!-- Email Authentication(USername and Password) -->
+<!-- 						<mailuser>yourEmail@mail.com</mailuser> -->
+<!-- 						<mailpassword>yourPassword</mailpassword> -->
+						
+						<receivers>
+							<!-- To Email address -->
+							<receiver>andy.mitchell@lexisnexisrisk.com</receiver>
+<!-- 							<receiver>atul.abhishek@lexisnexisrisk.com</receiver> -->
+<!-- 							<receiver>zeynep.usta@lexisnexisrisk.com</receiver> -->
+<!-- 							<receiver>nirusha.atmakuri@lexisnexisrisk.com</receiver> -->
+<!-- 							<receiver>neetu.singla@lexisnexisrisk.com</receiver> -->
+<!-- 							<receiver>cbs.automation@lexisnexisrisk.com</receiver> -->
+						</receivers>
+						
+						<fileSets>
+							<fileSet>
+								<!-- Report directory Path -->
+								<directory>${basedir}/target</directory>
+								<includes>
+									<!-- Report file name -->
+									<include>cucumber.html</include>
+								</includes>
+								<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
+								</fileSet>
+							<fileSet>
+								<!-- Log directory Path -->
+								<directory>${basedir}/target/logs</directory>
+								<includes>
+									<!-- Log files -->
+									<include>L2I.log</include>
+									<include>L2I_Summary.log</include>									
+								</includes>
+								<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
+							</fileSet>							
+							<fileSet>
+								<!-- Piped command output -->
+								<directory>${basedir}</directory>
+								<includes>
+									<include>output.txt</include>
+								</includes>
+								<!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
+							</fileSet>							
+						</fileSets>				
+					
+					</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

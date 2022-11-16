@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Output trace for log4j actions to file. Change to 'trace' for full detail -->
+<Configuration status="info" dest="target/logs/log4j2.log">
+
+    <Properties>
+	  <Property name="packagesFilter">org.junit,cucumber.runtime,sun.reflect,java.lang.reflect</Property>
+	  <!--  https://issues.apache.org/jira/browse/LOG4J2-1617   filters not currently working -->
+	  <Property name="log-pattern">%d %d{z} %5p %C(%L) - %m%n%throwable{filters(${packagesFilter})}</Property>	  
+	</Properties>
+
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${sys:log-pattern}"/>
+    </Console>
+	<!-- Primary log file -->
+	<RollingFile name="RollingL2IMain" fileName="target/logs/L2I.log" filePattern="target/logs/L2I-%d{yyyy-MM-dd}-%i.log">
+		<PatternLayout pattern="${sys:log-pattern}"/>
+		<!-- Rollover log file when the existing log file is older than the JVM start time -->		
+		<Policies>
+			<OnStartupTriggeringPolicy />
+<!-- 		<SizeBasedTriggeringPolicy size="50 MB"/> -->
+		</Policies>
+		<!-- Keep a maximum of 20000 files per day (i.e. no deletion occurs) -->		
+		<DefaultRolloverStrategy max="20000">
+		</DefaultRolloverStrategy>
+	</RollingFile>
+	<RollingFile name="RollingL2ISummary" fileName="target/logs/L2I_Summary.log" filePattern="target/logs/L2I_Summary-%d{yyyy-MM-dd}-%i.log">
+		<PatternLayout pattern="%d %d{z} %5p - %m%n"/>
+		<!-- Rollover log file when the existing log file is older than the JVM start time -->		
+		<Policies>
+			<OnStartupTriggeringPolicy />
+<!-- 		<SizeBasedTriggeringPolicy size="50 MB"/> -->
+		</Policies>
+		<!-- Keep a maximum of 20000 files per day (i.e. no deletion occurs) -->		
+		<DefaultRolloverStrategy max="20000">
+		</DefaultRolloverStrategy>
+	</RollingFile>
+  </Appenders>
+   
+   
+  <Loggers>
+  	<!-- Log any statements using a com.lnrs.* name -->  
+    <Logger name="com.lnrs" level="debug" additivity="false"><!-- false means don't propagate requests up to parents - i.e. 'root' -->
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="RollingL2IMain"/>
+    </Logger>
+  	<!-- Log any statements using the RUN_SUMMARY name (for summary report on scenarios) -->        
+    <Logger name="RUN_SUMMARY" level="info" additivity="false"><!-- false means don't propagate requests up to parents - i.e. 'root' -->
+      <AppenderRef ref="RollingL2ISummary"/>
+    </Logger>
+    <!-- root logger. Should never be invoked as all requests are catered for by the above two, with no additivity -->    
+    <Root level="warn">
+      <AppenderRef ref="RollingL2IMain"/>
+    </Root>
+  </Loggers>
+</Configuration>
