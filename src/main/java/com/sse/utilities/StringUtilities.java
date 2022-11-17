@@ -18,7 +18,7 @@ import org.openqa.selenium.InvalidArgumentException;
 /**
  * A class to hold static general String-related utilities.
  * 
- * @author mitchella3
+ * @author atul
  */
 public final class StringUtilities {
 	private final static Pattern SALESFORCE_LIGHTNING_ID_PATTERN = Pattern.compile("[a-zA-Z0-9]{18}");

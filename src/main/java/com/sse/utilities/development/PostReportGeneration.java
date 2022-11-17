@@ -23,7 +23,7 @@ import com.sse.utilities.configuration.PropertiesHolder;
 
 /**
  * This is a test utility called after report generation. Not part of the real suite (probably)
- * @author mitchella3
+ * @author atul
  *
  */
 public class PostReportGeneration {

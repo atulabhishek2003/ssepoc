@@ -9,7 +9,7 @@ import com.sse.utilities.Browser;
 
 /**
  * A class to help <b>during development only</b> to test XPaths, IDs etc....
- * @author mitchella3
+ * @author atul
  */
 public final class TestElementFinding {
 

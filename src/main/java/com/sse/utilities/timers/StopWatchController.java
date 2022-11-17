@@ -2,7 +2,7 @@ package com.sse.utilities.timers;
 
 /**
  * Stop watch controller interface
- * @author mitchella3
+ * @author atul
  *
  */
 public interface StopWatchController  {

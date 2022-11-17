@@ -23,7 +23,7 @@ import com.sforce.ws.ConnectorConfig;
  * A class used to hold general Enterprise SOAP API and Metadata API utilities (e.g.
  * error-handling, getting the connection etc.)
  * 
- * @author mitchella3
+ * @author atul
  *
  */
 public final class ConnectionUtilities {

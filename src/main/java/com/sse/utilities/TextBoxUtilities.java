@@ -3,7 +3,7 @@ package com.sse.utilities;
 import org.openqa.selenium.WebElement;
 /**
  * A collection of utilities associated with text boxes.
- * @author mitchella3
+ * @author atul
  */
 public final class TextBoxUtilities {
 

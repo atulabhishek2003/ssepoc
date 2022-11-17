@@ -1,15 +1,10 @@
 package com.sse.utilities.configuration;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.security.KeyStore;
-import javax.net.ssl.SSLContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import com.sse.utilities.Browser;
-import com.sse.utilities.security.SSLContextGenerator;
 
 /**
  * Contains details of the overall configuration.
@@ -20,11 +15,11 @@ public final class TestConfiguration {
 	/**
 	 * The current 'user' directory.
 	 * When running from Eclipse this will be the project root - e.g.
-	 * C:\Users\mitchella3\git\AdSalesAutoTest
+	 * C:\Users\atul.abhishek\git\AdSalesAutoTest
 	 */
 	public static final String USER_DIR  = System.getProperty("user.dir");
 	/**
-	 * User name. Will be the account under which this is running - e.g. "mitchella3".
+	 * User name. Will be the account under which this is running - e.g. "atul".
 	 */
 	public static final String USER_NAME = System.getProperty("user.name");
 	/**
@@ -72,23 +67,10 @@ public final class TestConfiguration {
 
 		File directory = new File(scenarioDataStoreDirectory);
 		if (!directory.exists()) directory.mkdirs();
-		configureSSLKeystores();
-
 		if (initialiseBrowser) Browser.initialise();
 
 	}
-
-	private static void configureSSLKeystores() {
-		String filename = "src/main/resources/ViperDemoAPI_JKS.jks".replace('/', File.separatorChar);
-		log.info("About to configure KeyStore at : " + filename);
-		try (FileInputStream is = new FileInputStream(filename);) {
-			KeyStore keystore = KeyStore.getInstance(KeyStore.getDefaultType());
-			String password = "changeit";
-			keystore.load(is, password.toCharArray());
-			SSLContext.setDefault(SSLContextGenerator.provideSSLContext(keystore, password.toCharArray()));
-		} catch (Exception e) {
-			log.error("Issue populating SSL Keystores. Any external https call is likely to fail",e);
-		}
+	
 	}
 
-}
+

@@ -12,7 +12,7 @@ import java.util.Locale;
 
 /**
  * A collection of utilities associated with Date and Time
- * @author mitchella3
+ * @author atul
  */
 public final class DateUtilities {
 

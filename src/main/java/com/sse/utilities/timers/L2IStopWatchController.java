@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
  * Controller of all stopwatches for L2I automation.
  * <p>Its main purpose is to ensure that a default stop watch is always active
  * by starting the default watch when another has stopped.
- * @author mitchella3
+ * @author atul
  *
  */
 public class L2IStopWatchController implements StopWatchController {

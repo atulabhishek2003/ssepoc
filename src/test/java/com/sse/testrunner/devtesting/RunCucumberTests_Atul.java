@@ -50,8 +50,7 @@ public class RunCucumberTests_Atul extends AbstractRunCucumber {
 	@SuppressWarnings("javadoc")
 	@BeforeClass
 	public static void before() {
-		ExceptionHandler.displaySplash=true;
-		
+		ExceptionHandler.displaySplash=true;		
 		ProfileChanger.prepareForAutoRun();
 
 	}

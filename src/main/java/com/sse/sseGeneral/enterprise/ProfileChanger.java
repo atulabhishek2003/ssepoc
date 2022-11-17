@@ -12,7 +12,7 @@ import com.sse.utilities.configuration.PropertiesHolder;
 /**
  * A class used to invoke the Salesforce Enterprise API and disable/enable Single Sign-On for automation profiles.
  * This also sets all relevant profiles to "password never expires" to allow them to login with an expired password.
- * @author mitchella3
+ * @author atul
  *
  */
 public final class ProfileChanger {

@@ -24,7 +24,7 @@ import com.sse.utilities.WebElementUtilities;
  * Page class representing the Navigation pane and Search box/button at the top
  * of most standard Salesforce pages<br>
  *
- * @author mitchella3
+ * @author atul
  */
 public class NavigationPanel extends BasePage {
 	private static Logger log = LogManager.getLogger(NavigationPanel.class);

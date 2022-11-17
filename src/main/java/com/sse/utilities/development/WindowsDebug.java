@@ -6,7 +6,7 @@ import com.sse.utilities.Browser;
 
 /**
  * A class to output information on the current Window handles - for debugging only.
- * @author mitchella3
+ * @author atul
  */
 public class WindowsDebug {
 

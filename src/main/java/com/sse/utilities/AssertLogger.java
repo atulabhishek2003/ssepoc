@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
  * <p>The methods will "log.error" any assertion failure so that the developer can correct the issue as a background task.
  *
  * <p>Note that all methods are marked as Deprecated to indicate that they not for "real" use.
- * @author mitchella3
+ * @author atul
  *
  */
 public final class AssertLogger {

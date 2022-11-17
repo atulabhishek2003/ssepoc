@@ -29,7 +29,7 @@ import com.sse.utilities.timers.L2IStopWatchController;
 /**
  * A collection of utilities associated with waiting strategies.
  * Some are potentially UNTESTED and most are probably improvable, but this is a starting point!!!
- * @author mitchella3
+ * @author atul
  */
 public final class WaitUtilities {
 	private static Logger log = LogManager.getLogger(WaitUtilities.class);

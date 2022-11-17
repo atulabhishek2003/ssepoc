@@ -15,7 +15,7 @@ import com.sse.utilities.WaitUtilities;
 /**
  * Page class representing the Salesforce home page
  *
- * @author mitchella3
+ * @author atul
  */
 public class HomePage extends BasePage {
 

@@ -20,7 +20,7 @@ import com.sse.utilities.timers.StopWatchController;
 
 /**
  * An abstract superclass of all test runners, used to hold the setup() and after() static methods.
- * @author mitchella3
+ * @author atul
  *
  */
 public class AbstractRunCucumber {

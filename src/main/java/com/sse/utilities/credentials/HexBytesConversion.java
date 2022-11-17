@@ -6,7 +6,7 @@ import java.util.Locale;
  * Class of small utilities to convert between a String hex representation of an unsigned byte array, to the byte array.
  * Used to enable byte arrays of credentials to be stored in String form within properties files etc. with no danger of
  * character encoding issues (as characters 0-9 and A-F are generally common between the major 8-byte encoding schemes.
- * @author mitchella3
+ * @author atul
  *
  */
 public final class HexBytesConversion {

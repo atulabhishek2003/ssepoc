@@ -14,7 +14,7 @@ import io.cucumber.java.en.Given;
 /**
  * Step definitions related to the Home page.
  * 
- * @author mitchella3
+ * @author atul
  */
 public final class HomePageSteps {
 	

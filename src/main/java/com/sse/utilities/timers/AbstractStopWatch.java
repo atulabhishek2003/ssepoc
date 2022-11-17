@@ -3,7 +3,7 @@ package com.sse.utilities.timers;
 /**
  * Superclass of other "stop watch" classes - used to accumulate the elapsed time
  * of different types of activity within the automation suite.
- * @author mitchella3
+ * @author atul
  *
  */
 public class AbstractStopWatch {

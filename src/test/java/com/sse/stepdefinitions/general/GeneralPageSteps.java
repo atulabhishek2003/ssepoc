@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 
 /**
  * Step definitions which can be generally used independently of the current page.
- * @author mitchella3
+ * @author atul
  */
 public class GeneralPageSteps {
 

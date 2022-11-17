@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 /**
  * Step definitions related to the navigation tabs and search entry at the top of most Salesforce pages.
- * @author mitchella3
+ * @author atul
  */
 public final class NavigationPanelSteps {
 

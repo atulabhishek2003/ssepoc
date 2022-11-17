@@ -20,7 +20,7 @@ import com.sforce.ws.ConnectorConfig;
 
 /**
  * Test class attempt to get Enterprise WSDL from Salesforce (as Chrome often runs out of memory)
- * @author mitchella3
+ * @author atul
  *
  */
 @SuppressWarnings("javadoc")

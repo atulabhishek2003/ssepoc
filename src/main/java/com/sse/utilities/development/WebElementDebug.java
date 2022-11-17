@@ -14,7 +14,7 @@ import com.sse.utilities.WaitUtilities;
 /**
  * A class to output information on WebElement objects - for debugging only.
  *
- * @author mitchella3
+ * @author atul
  */
 public class WebElementDebug {
 

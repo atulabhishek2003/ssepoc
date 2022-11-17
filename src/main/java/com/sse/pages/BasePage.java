@@ -21,7 +21,7 @@ import com.sse.utilities.WaitUtilities;
  * This is the superclass of all Page objects and contains common initialisation
  * code.
  *
- * @author mitchella3
+ * @author atul
  */
 public abstract class BasePage {
 	private static Logger log = LogManager.getLogger(BasePage.class);

@@ -38,7 +38,7 @@ import io.cucumber.java.Scenario;
  *
  * This is instantiated afresh for each scenario.
  *
- * @author mitchella3
+ * @author atul
  */
 public class ScenarioData implements Serializable {
 	private static Logger log = LogManager.getLogger(ScenarioData.class);

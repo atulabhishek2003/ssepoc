@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 /**
  * Various general utilities for 'general' WebElements.
- * @author mitchella3
+ * @author atul
  */
 public final class WebElementUtilities {
 	

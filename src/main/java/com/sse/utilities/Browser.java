@@ -24,7 +24,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 /**
  * A class representing the 'browser' which holds the web driver instance and details.
  * It also includes 'browser' activities, e.g. page refreshes etc.
- * @author mitchella3
+ * @author atul
  */
 public final class Browser {
 

@@ -10,7 +10,7 @@ import com.sse.utilities.development.ErrorSplash;
 
 /**
  * A class for dealing with Exceptions.
- * @author mitchella3
+ * @author atul
  */
 public final class ExceptionHandler {
 	/**

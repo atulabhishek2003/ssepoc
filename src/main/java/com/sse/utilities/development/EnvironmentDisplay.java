@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Properties;
 /**
  * A class to allow the display (to the console) of useful environment-related information.
- * @author mitchella3
+ * @author atul
  *
  */
 public final class EnvironmentDisplay {

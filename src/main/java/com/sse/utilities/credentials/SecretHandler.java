@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
  * A class used to encrypt and decrypt passwords from properties files (or other String data if required).
  * This currently uses AES encryption in conjunction with conversion from bytes to a String hex representation
  * to enable 'readable' and easily-enterable envrypted password into properties files etc.
- * @author mitchella3
+ * @author atul
  *
  */
 public final class SecretHandler {
@@ -30,7 +30,7 @@ public final class SecretHandler {
 	 * environment variable in the operating system (or runtime) configuration. The name of the variable in which this key is stored is the value
 	 * of the constant below.
 	 */
-	public static final String ENVIRONMENT_VARIABLE_HOLDING_KEY = "L2I_KEY";
+	public static final String ENVIRONMENT_VARIABLE_HOLDING_KEY = "SSE_KEY";
 
 	private static Logger log = LogManager.getLogger(SecretHandler.class);
 	private static final boolean DEBUG = false; //set to true in the event of issues to gain more debugging output.
